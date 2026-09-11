@@ -1,5 +1,5 @@
 # rvz — Retrievalizer
-**rvz** is an abbreviation for **Retrievalizer**, a tool designed to rapidly retrieve FASTA files and their metadata from NCBI.
+**rvz** is an abbreviation for **Retrievalizer**, a tool designed to rapidly retrieve FASTA files and their metadata from NCBI in a single command-line.
 
 # What it does?
 - Retrieve FASTA files and metadata from NCBI.
