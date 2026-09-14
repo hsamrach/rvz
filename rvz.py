@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # All rights reserved. This script is provided "as is" without warranty of any kind.
 # Please see the LICENSE file for details on usage and redistribution.
-# Built and Maintained by Samrach HAN
+# Samrach HAN
 # required: pip install pandas biopython openpyxl
 
 import argparse
@@ -23,23 +23,21 @@ from Bio import Entrez, SeqIO
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Download NCBI genomes + retrieve rich metadata"
-    )
-    parser.add_argument("-i", "--input", required=True, help="Input file with accessions (one per line in text file)")
-    parser.add_argument("-o", "--outdir", required=True, help="Output directory")
-    parser.add_argument("-e", "--email", required=True, help="Email for Entrez")
-    parser.add_argument("-t", "--threads", type=int, default=1, help="Number of threads for parallel download (default=1)")
-    parser.add_argument("-m", "--mode", choices=["both", "only_genome", "only_metadata"], default="both",
-        help=("Execution mode (default: both):\n"
-            "  both           — download FASTA and metadata\n"
-            "  only_genome    — download FASTA only, skip metadata\n"
-            "  only_metadata  — download metadata only"),
-    )
+    parser = argparse.ArgumentParser(usage="rvz -i list.txt -o dir -e user@gmail.com", description="Download genomes and metadata from NCBI")
+    parser.add_argument("-i", "--input", metavar="txt", required=True, help="Input file with accessions (one per line in text file)")
+    parser.add_argument("-o", "--outdir", metavar="dir", required=True, help="Output directory")
+    parser.add_argument("-e", "--email", metavar="email", required=True, help="Email for Entrez")
+    parser.add_argument("-t", "--threads", metavar="int", type=int, default=1,
+        help="Number of threads for parallel download (default=1)")
+    parser.add_argument("-m", "--mode",
+        choices=["both", "only_genome", "only_metadata"], default="both",
+        help="  both           — download FASTA and metadata\n"
+             "  only_genome    — download FASTA only, skip metadata\n"
+             "  only_metadata  — download metadata only")
     return parser.parse_args()
 
 def setup_logging(outdir):
-    log_file = os.path.join(outdir, "download.log")
+    log_file = os.path.join(outdir, "rvz.log")
     root = logging.getLogger()
     if root.handlers:
         root.handlers.clear()
