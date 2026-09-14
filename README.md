@@ -9,7 +9,7 @@
 - Both ```.fna``` and ```.fasta``` can be downloaded.
 - Downloading multiple FASTA files concurrently using threads.
 - Calculate and verify MD5 checksums of the genomes to ensure that every downloaded file is complete and uncorrupted.
-- Automatically retry downloads up to five times in the event of an MD5 checksum mismatch or server failure.
+- Automatically retry downloads up to five times for server failure and up to 3 times for MD5 checksum mismatch.
 
 # How's it installed?
 ## Via Conda:
