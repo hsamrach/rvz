@@ -17,7 +17,7 @@ conda activate rvz_env
 rvz -h
 ```
 ## Manual installation:
-Please install Python >=3.18 along with biopython, openpyxl, and pandas in the path, and run with ```python3 rvz.py -h```
+Please install Python >=3.8 along with biopython, openpyxl, and pandas in the path, and run with ```python3 rvz.py -h```
 # How's it used?
 ```
 usage: rvz -i list.txt -o dir -e user@gmail.com
