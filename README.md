@@ -8,7 +8,7 @@
 - Both Genome and Gene FASTA files can be downloaded.
 - Both ```.fna``` and ```.fasta``` can be downloaded.
 - Downloading multiple FASTA files concurrently using threads.
-- Calculate and verify MD5 checksums to ensure that every downloaded file is complete and uncorrupted.
+- Calculate and verify MD5 checksums of the genomes to ensure that every downloaded file is complete and uncorrupted.
 - Automatically retry downloads up to five times in the event of an MD5 checksum mismatch or server failure.
 
 # How's it installed?
