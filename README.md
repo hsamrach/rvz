@@ -11,7 +11,11 @@
 
 # How's it installed?
 ## Via Conda:
-```Conda (mamba) create -n rvz_env -c defaults -c conda-forge -c bioconda -c samrachhan11 rvz=1.0 -y```
+```
+Conda (mamba) create -n rvz_env -c defaults -c conda-forge -c bioconda -c samrachhan11 rvz=1.0 -y
+conda activate rvz_env
+rvz -h
+```
 ## Manual installation:
 Please install Python >=3.18 along with biopython, openpyxl, and pandas in the path, and run with ```python3 rvz.py -h```
 # How's it used?
