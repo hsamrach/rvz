@@ -23,7 +23,7 @@ from Bio import Entrez, SeqIO
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def parse_args():
-    parser = argparse.ArgumentParser(usage="rvz -i list.txt -o dir -e user@gmail.com", description="Download genomes and metadata from NCBI")
+    parser = argparse.ArgumentParser(usage="rvz -i list.txt -o dir -e user@gmail.com", description="Download NCBI FASTA and metadata")
     parser.add_argument("-i", "--input", metavar="txt", required=True, help="Input file with accessions (one per line in text file)")
     parser.add_argument("-o", "--outdir", metavar="dir", required=True, help="Output directory")
     parser.add_argument("-e", "--email", metavar="email", required=True, help="Email for Entrez")
