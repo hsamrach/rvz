@@ -1,3 +1,4 @@
+<img src="rvz.svg" alt="Logo" width="400">
 # rvz — Retrievalizer
 **rvz** is an abbreviation for **Retrievalizer**, a tool designed to rapidly retrieve FASTA files and their metadata from NCBI in a single command-line.
 
@@ -36,10 +37,12 @@ options:
 # What does it output?
 It produces one directory, ```genomes``` containing the downloaded FASTA file, one log file called ```rvz.log``` and a metadata file named ```metadata.xlsx```.
 
-## Output
-
-`rvz` generates a metadata table containing information about each retrieved sequence and its corresponding FASTA file.
+The table below is an example of `metadata.xlsx`.
 
 | Accession  | Organism                                                                                           | Assembly Name | Submitter | Submission Date | Geo Location | Collection Date | Host | Isolation Source      | Forward Primer Name | Forward Primer Sequence | Reverse Primer Name | Reverse Primer Sequence | Sequence Length | Record Date | Submitter (Authors)                                                                                                                                                    | Genome Size | Contig Count | GC (%) | Genome File                            |
 | :--------- | :------------------------------------------------------------------------------------------------- | :------------ | :-------- | :-------------- | :----------- | :-------------- | :--- | :-------------------- | :------------------ | :---------------------- | :------------------ | :---------------------- | --------------: | :---------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------: | -----------: | -----: | :------------------------------------- |
 | PX550059.1 | Rattus rattus voucher BP0075_R2 cytochrome c oxidase subunit I (COX1) gene, partial cds; mitochondrial      | NA            | NA        | 2025/11/23      | Cambodia: Battambang        | 12-Jul-2021              | NA   | NA | Utyr                  | accyctgtcyttagatttacagtc                      | C1L705                  | acttcdgggtgnccraaraatca                      |             724 | 23-NOV-2025 |Han,S., Rahi,P., Heng,S., Gov,P., Heng,V., Khun,L., Hoem,T., Hul,V., Hak,S., Chiek,S., Banuls,A.-L., Ferdinand,S., Cheng,S. and Guillard,B.                                             |         724 |            1 |  41.58 | `./test_rvz1/genomes/PX550059.1.fasta` |
+# Dependencies
+- biopython
+- pandas
+- openpyxl
