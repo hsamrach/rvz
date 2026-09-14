@@ -295,8 +295,8 @@ def extract_genbank_metadata(nuc_acc):
         record_date = record.annotations.get("date", "NA")
 
         refs = record.annotations.get("references", [])
-        if refs:
-            submitter_names = ", ".join(refs[0].authors)
+        if refs and getattr(refs[0], "authors", ""):
+            submitter_names = str(refs[0].authors)
 
         for feature in record.features:
             if feature.type == "source":
