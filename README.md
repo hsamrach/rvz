@@ -1,4 +1,4 @@
-<img src="rvz.svg" alt="Logo" width="400">
+<img src="rvz.svg" alt="Logo" width="300">
 
 # rvz — Retrievalizer
 **rvz** is an abbreviation for **Retrievalizer**, a tool designed to rapidly retrieve FASTA files and their metadata from NCBI in a single command-line.
