@@ -22,7 +22,7 @@ rvz -h
 Please install Python >=3.8 along with biopython, openpyxl, and pandas in the path, and run with ```python3 rvz.py -h```
 # How's it used?
 ```
-usage: rvz -i list.txt -o dir -e user@gmail.com
+usage: rvz -i list.txt -o dir -e user@gmail.com -t 4
 
 Download NCBI FASTA and metadata
 
